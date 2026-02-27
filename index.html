@@ -9,284 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
 
-<style>
-
-  :root {
-    font-size: 16px;
-    font-family: 'Roboto Mono', monospace;
-    --text-primary: #b6b6b6;
-    --text-secondary: #ececec;
-    --bg-primary: #23232e;
-    --bg-secondary: #141418;
-    --transition-speed: 600ms;
-  }
-
-body {
-  margin: 0;
-  color: white;
-  background: #202731;
-}
-
-section {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 400px;
-  padding: 100px 20vw;
-}
-
-.blue {
-  background: #3c31dd;
-}
-
-.red {
-  background: #dd3f31;
-}
-
-.pink {
-  background: #ff0066;
-}
-
-.dark {
-  background: #0f0f10;
-}
-
-.spacer {
-    aspect-ratio: 960/300;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-.layer1 {
-    background-image: url('./your-image.svg');
-}
-
-
-body::-webkit-scrollbar {
-  width: 0.25rem;
-}
-
-body::-webkit-scrollbar-track {
-  background: #1e1e24;
-}
-
-body::-webkit-scrollbar-thumb {
-  background: #6649b8;
-}
-
-main {
-  margin-left: 7rem;
-  padding: 1rem;
-}
-
-.navbar {
-  position: fixed;
-  background-color: var(--bg-primary);
-  transition: width 600ms ease;
-  overflow: scroll;
-}
-
-.navbar-nav {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
-}
-
-.nav-item {
-  width: 100%;
-}
-
-.nav-item:last-child {
-  margin-top: auto;
-}
-
-.nav-link {
-  display: flex;
-  align-items: center;
-  height: 5rem;
-  color: var(--text-primary);
-  text-decoration: none;
-  filter: grayscale(100%) opacity(0.7);
-  transition: var(--transition-speed);
-}
-
-.nav-link:hover {
-  filter: grayscale(0%) opacity(1);
-  background: var(--bg-secondary);
-  color: var(--text-secondary);
-}
-
-.link-text {
-  display: none;
-  margin-left: 1rem;
-}
-
-.nav-link svg {
-  width: 2rem;
-  min-width: 2rem;
-  margin: 0 1.5rem;
-}
-
-.fa-primary {
-  color: #ff7eee;
-}
-
-.fa-secondary {
-  color: #df49a6;
-}
-
-.fa-primary,
-.fa-secondary {
-  transition: var(--transition-speed);
-}
-
-.logo {
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-  text-align: center;
-  color: var(--text-secondary);
-  background: var(--bg-secondary);
-  font-size: 1.5rem;
-  letter-spacing: 0.3ch;
-  width: 100%;
-}
-
-.logo svg {
-  transform: rotate(0deg);
-  transition: var(--transition-speed);
-}
-
-.logo-text
-{
-  display: inline;
-  position: absolute;
-  left: -999px;
-  transition: var(--transition-speed);
-}
-
-.navbar:hover .logo svg {
-  transform: rotate(-180deg);
-}
-
-/* Small screens */
-@media only screen and (max-width: 600px) {
-  .navbar {
-    bottom: 0;
-    width: 100vw;
-    height: 5rem;
-  }
-
-  .logo {
-    display: none;
-  }
-
-  .navbar-nav {
-    flex-direction: row;
-  }
-
-  .nav-link {
-    justify-content: center;
-  }
-
-  main {
-    margin: 0;
-  }
-}
-
-/* Large screens */
-@media only screen and (min-width: 600px) {
-  .navbar {
-    top: 0;
-    width: 5rem;
-    height: 100vh;
-  }
-
-  .navbar:hover {
-    width: 16rem;
-  }
-
-  .navbar:hover .link-text {
-    display: inline;
-  }
-
-  .navbar:hover .logo svg
-  {
-    margin-left: 11rem;
-  }
-
-  .navbar:hover .logo-text
-  {
-    left: 0px;
-  }
-}
-
-.dark {
-  --text-primary: #b6b6b6;
-  --text-secondary: #ececec;
-  --bg-primary: #23232e;
-  --bg-secondary: #141418;
-}
-
-.light {
-  --text-primary: #1f1f1f;
-  --text-secondary: #000000;
-  --bg-primary: #ffffff;
-  --bg-secondary: #e4e4e4;
-}
-
-.solar {
-  --text-primary: #576e75;
-  --text-secondary: #35535c;
-  --bg-primary: #fdf6e3;
-  --bg-secondary: #f5e5b8;
-}
-
-.theme-icon {
-  display: none;
-}
-
-.dark #darkIcon {
-  display: block;
-}
-
-.light #lightIcon {
-  display: block;
-}
-
-.solar #solarIcon {
-  display: block;
-}
-
-.custom-shape-divider-top-1644593816 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.custom-shape-divider-top-1644593816 svg {
-    position: relative;
-    display: block;
-    width: calc(152% + 1.3px);
-    height: 113px;
-}
-
-.custom-shape-divider-top-1644593816 .shape-fill {
-    fill: #3c31dd;
-}
-
-</style>
-
+  <link rel="stylesheet" href="style.css">
 
 <body>
 
@@ -396,16 +119,16 @@ main {
 
   <section>
     <h1 id ="about">About Me</h1>
-    <p>I grew up in Idaho and was raised together with 7 siblings by 2 amazing parents. We enjoy camping, fishing, skiing, and exploring the outdoors. We grew up together, played games, attended church, and ate family dinners every night. Our parents helped us build bonds with each other that are strong to this day.</p>
+    <p>I grew up in Idaho. I have 7 siblings and 2 amazing parents. We enjoy camping, fishing, skiing, and exploring the outdoors. We grew up together, played games, attended church, and ate family dinners every night. Our parents helped us build bonds with each other that are strong to this day.</p>
     <p>I took an interest in computers when I was young. I also enjoyed electronics and taking apart toys and machines as a child to see how they worked. My father was an electrical contractor, and had a garage full of wire and electrical parts, and I used to play in there a lot, and try to build robots and tinker with various tools and equipment. I remember watching my older brothers write computer programs in (q)Basic, and I would learn from them and read their code.</p>
     <p>I’ve always been good with money. I did many small business ventures as a child, like selling snow cones, lemonade, fireworks, scones, mowing lawns, and teaching guitar lessons. For a few years, I would build spook alleys in the back yard, hang up posters all over town, and charge admission at the entrance. I love dreaming and building. Its one of the most enjoyable ways I choose to spent time, even to this day.</p>
     <p>In High School, I invested a lot of time and practice into music. I played guitar in the jazz band and drums in the marching band. I also played with a drum line at a nearby university all 4 years of high school, and I really thought I was going to play drums as a profession. It was a big part of my teenage years. I studied abroad in Cairo, Egypt my junior year of high school, with an emphasis on Arabic studies. I loved it!</p>
-    <p>I worked in construction during summers, for my fathers electrical contracting company. I learned more construction trades after buying a fixer upper house when I was 18. It had sat vacant for many decades, and was not livable. I spent the summer repairing it, and making it livable. I learned how to drywall, paint, plumb, frame, roof, pour concrete and more. When it was finished, I sold it and made a good amount of money.</p>
+    <p>I worked in construction during summers. I learned more construction trades after buying a fixer upper house when I was 18. It had sat vacant for many decades, and was not livable. I spent the summer repairing it, and making it livable. I learned how to drywall, paint, plumb, frame, roof, pour concrete and more. When it was finished, I sold it and made a good amount of money.</p>
     <p>After high school, I moved to Berlin, Germany for two years, to volunteer as a church missionary. I studied German and became fluent. I grew a lot over these two years. I had leadership opportunities and developed lasting friendships.</p>
     <p>I was 21 years old when I returned home from Germany. I took a job as a welder fabricator and spent the money I earned on flight school to become a pilot. I also attended university, studying aircraft mechanics and aviation management for a little while, but ended up leaving to pursue entrepreneur endeavors instead.</p>
-    <p>I took a two week real estate course, passed an exam, and become a licensed Realtor! I bought more fixer upper houses, and became more efficient at repairing and selling them and making a profit. I also got pretty good at deal structuring and finance, especially creative finance. I remember buying one house entirely on credit cards on an 18 month Zero percent interest promotion, giving me enough time to do repairs and get the whole thing refinanced!</p>
-    <p>I met the love of my life in my mid 20s. We made a great team, and would eventually marry and have 3 beautiful children. We kept doing the house flipping, even with the family, sometimes traveling across the country to fix up and live in a home before selling it. We would always make our way back to Idaho, and by my early 30s we had decided to settle down here.</p>
-    <p>I started a Youtube channel where I would demonstrate how useful certain free software programs could be. After several years, these videos had received a lot of views, and I decided to start making more videos like this. I started making them at home, but family distractions made it hard, so I decided to rent some commercial space to use for a quiet office. The previous tenant had ran a computer repair shop out of this space, and it still had their sign out front. So I setup my computer and started working on videos, but people would walk in with their computers and ask me to fix them. At first I told them that this was no longer a repair shop, but I realized that some of the ‘problems’ that people we’re having with their computers were thing I could fix. I created a price sheet and started accepting peoples computers and fixing them. If I didn’t know how to fix it, I would just watch a Youtube video and learn. I ran this computer repair business for several years, eventually hiring employees to run it, so I could return to making videos, which I did in the basement of the store in the early hours of each morning. It was awesome, and a very productive and lucrative time of my life.</p>
+    <p>I took a two week real estate course, passed an exam, and become a licensed Realtor! I bought more fixer upper houses, and became more efficient at repairing and selling them and making a profit. I also got pretty good at deal structuring and finance, especially creative finance. I remember buying one house entirely on credit cards on an 18 month zero percent interest promotion, giving me enough time to do repairs and get the whole thing refinanced!</p>
+    <p>I met the love of my life in my mid 20s. We make a great team, and would eventually marry and have 3 beautiful children. We kept doing the house flipping, even with the family, sometimes traveling across the country to fix up and live in a home before selling it. We would always make our way back to Idaho, and by my early 30s we had decided to settle down here.</p>
+    <p>I started a Youtube channel where I would demonstrate how useful certain free software programs could be. After several years, these videos had received a lot of views, and I decided to start making more videos like this. I started making them at home, but family distractions made it hard, so I decided to rent some commercial space to use for a quiet office. The previous tenant had ran a computer repair shop out of this space, and it still had their sign out front. So I setup my computer and started working on videos, but people would walk in with their computers and ask me to fix them. At first I told them that this was no longer a repair shop, but I realized that some of the ‘problems’ that people we’re having with their computers were things I could fix. I created a price sheet and started accepting peoples computers and fixing them. If I didn’t know how to fix it, I would just watch a Youtube video and learn. I ran this computer repair business for several years, eventually hiring employees to run it, so I could return to making videos, which I did in the basement of the store in the early hours of each morning. It was awesome, and a very productive and fun time of my life!</p>
     <p>Thats all for now, :)...</p>
   </section>
   
@@ -511,21 +234,21 @@ main {
             aria-hidden="true"
             focusable="false"
             data-prefix="fad"
-            data-icon="space-station-moon-alt"
+            data-icon="house"
             role="img"
             xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 512 512"
-            class="svg-inline--fa fa-space-station-moon-alt fa-w-16 fa-5x"
+            viewBox="0 0 576 512"
+            class="svg-inline--fa fa-house fa-w-18 fa-5x"
           >
             <g class="fa-group">
               <path
                 fill="currentColor"
-                d="M501.70312,224H448V160H368V96h48V66.67383A246.86934,246.86934,0,0,0,256,8C119.03125,8,8,119.0332,8,256a250.017,250.017,0,0,0,1.72656,28.26562C81.19531,306.76953,165.47656,320,256,320s174.80469-13.23047,246.27344-35.73438A250.017,250.017,0,0,0,504,256,248.44936,248.44936,0,0,0,501.70312,224ZM192,240a80,80,0,1,1,80-80A80.00021,80.00021,0,0,1,192,240ZM384,343.13867A940.33806,940.33806,0,0,1,256,352c-87.34375,0-168.71094-11.46094-239.28906-31.73633C45.05859,426.01953,141.29688,504,256,504a247.45808,247.45808,0,0,0,192-91.0918V384H384Z"
+                d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V480c0 17.7-14.3 32-32 32H128c-17.7 0-32-14.3-32-32V396.2c-4.3-7-8.3-16.8-8.3-25.6V275.5c0-17.7 14.3-32 32-32h327.7c6.6 0 12.5-5.4 12.5-12.5c0-6.3-4.6-11.6-10.8-12.5l-159.8-7.8c-17.7 0-32-14.3-32-32v-17.7c0-8.8 7.2-16 16-16h32zM272 128h128v128h-32v-80c0-17.7-14.3-32-32-32h-64c-17.7 0-32 14.3-32 32v80H272V128z"
                 class="fa-secondary"
               ></path>
               <path
                 fill="currentColor"
-                d="M256,320c-90.52344,0-174.80469-13.23047-246.27344-35.73438a246.11376,246.11376,0,0,0,6.98438,35.998C87.28906,340.53906,168.65625,352,256,352s168.71094-11.46094,239.28906-31.73633a246.11376,246.11376,0,0,0,6.98438-35.998C430.80469,306.76953,346.52344,320,256,320Zm-64-80a80,80,0,1,0-80-80A80.00021,80.00021,0,0,0,192,240Zm0-104a24,24,0,1,1-24,24A23.99993,23.99993,0,0,1,192,136Z"
+                d="M288 128h-32v128h32c17.7 0 32-14.3 32-32v-96c0-17.7-14.3-32-32-32zm-96 0h-32v128h32c17.7 0 32-14.3 32-32v-96c0-17.7-14.3-32-32-32z"
                 class="fa-primary"
               ></path>
             </g>
